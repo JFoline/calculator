@@ -7,30 +7,38 @@
 	font-family: 'Teko', cursive;
 }
 #keys{
-  width:200px;
-
+  width:212px;
 }
 button{
   width:50px;
   height:50px;
-	font-size: 20px;
+	font-size: 40px;
 	border:0px;
 	background-color: darkgray;
 }
 button:hover{
 	background-color: lightgray;
 }
-#display{
+.display{
 	width:200px;
-	height: 50px;
-	line-height: 20px;
+	min-height: 40px;
+	line-height: 30px;
+	font-size: 30px;
 	padding: 5px;
 	background-color: lightgray;
 	text-align: right;
 }
 #input{
-	font-size: 20px;
+
+	height: 20px;
+
+
+
+
+	text-align: right;
 }
 #output{
-	font-size: 30px;
+	height: 30px;
+
+
 }
