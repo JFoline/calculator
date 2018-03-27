@@ -3,16 +3,23 @@ let output = document.getElementById('output');
 let runMemory = '';
 let digit = '0';
 let displayValue = '';
+const maxLength = 16;
 let x;
 let symbol;
 let operator;
 let func;
 
-var add = (x,y) => {return(x + y)}
-var subtract = (x,y) => {return(x - y)}
-var multiply = (x,y) => {return(x * y)}
-var divide = (x,y) => {return(x / y)}
-var operate = (operator, x, y) => { return operator(x ,y)}
+var add = (x,y) =>
+{return(x + y)}
+var subtract = (x,y) =>
+{return(x - y)}
+var multiply = (x,y) =>
+{return(x * y)}
+var divide = (x,y) =>
+{if(y==0){return"opps";}else{return(x / y)}}
+var exponent = (x,y) =>
+{return Math.pow(x,y)}
+
 
 //type numbers
 var typeDig = (digit) =>
@@ -30,46 +37,55 @@ var typeDec = () =>
         }
       }
     }
+//switch positivity and negativity
+var changePolar = () =>
+  {
+    if(input.innerHTML.charAt(0) !=  '-'){
+    input.innerHTML = '-' + input.innerHTML;
+    }else{
+    input.innerHTML = input.innerHTML.slice(1);
+    }
+  }
 //clear entry
-var clearEntry = () =>
+var clearAll = () =>
     {
       input.innerHTML = '';
     }
 //clear all, destroy arrays. Backspace will be replacement until later
-var clearAll = () =>
+var backSpace = () =>
     {
       input.innerHTML = input.innerHTML.slice(0,-1);
     }
 
 var funcSelect = (symbol) =>
   {
-    func = symbol;
-    x = Number(input.innerHTML);
-    input.innerHTML = '';
-    console.log(func, x);
+    if(input.innerHTML != ''){
+      switch (symbol) {
+        case '+':
+          operate = add;
+          break;
+        case '-':
+          operate = subtract;
+          break;
+        case '×':
+          operate = multiply;
+          break;
+        case '÷':
+          operate = divide;
+          break;
+        case '^':
+          operate = exponent;
+          break;
+        }
+      x = Number(input.innerHTML);
+      input.innerHTML = '';
+    }
   }
 
-var operateTest = () =>
+var runOperate = () =>
   {
-    y = Number(input.innerHTML);
-    
-    console.log(operator , x, y);
+    if(input.innerHTML != ''){
+      y = Number(input.innerHTML);
+      input.innerHTML = operate(x,y);
+    }
   }
-
-var topOfTheGarbage = () =>
-{
-  switch (func) {
-    case '+':
-      operator = add;
-      break;
-    case '-':
-      operator = subtract;
-      break;
-    case '×':
-      operator = multiply;
-      break;
-    case '÷':
-      operator = divide;
-      break;
-  }
-}

@@ -8,7 +8,7 @@
 <body>
   <div id="keys">
 
-  <button onClick="clearEntry()">CE</button>
+  <button onClick="backSpace()">←</button>
   <button onClick="clearAll()">C</button>
   <button onClick="changePolar()">+/-</button>
   <button onClick="funcSelect('^')">^</button>
@@ -32,13 +32,14 @@
 
   <button onClick="typeDec('.')">.</button>
   <button onClick="typeDig('0')">0</button>
-  <button onClick="operateTest()">=</button>
+  <button onClick="runOperate()">=</button>
   <button onClick="funcSelect('+')">+</button>
-  </div>
+
   <div class="display">
     <span id="output"></span>
 
     <span id="input"></span>
+  </div>
   </div>
 </body>
 <script src="app.js" charset="utf-8"></script>
