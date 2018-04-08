@@ -7,7 +7,9 @@
 	font-family: 'Teko', cursive;
 }
 #keys{
-  width:207px;
+  width:260px;
+
+	margin: auto;
 }
 button{
   width:50px;

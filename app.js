@@ -38,7 +38,7 @@ var typeDec = () =>
       }
     }
 //switch positivity and negativity
-var changePolar = () =>
+var changeSign = () =>
   {
     if(input.innerHTML.charAt(0) !=  '-'){
     input.innerHTML = '-' + input.innerHTML;
@@ -47,14 +47,15 @@ var changePolar = () =>
     }
   }
 //clear entry
-var clearAll = () =>
+var allClear = () =>
     {
       input.innerHTML = '';
+      x = '';
     }
 //clear all, destroy arrays. Backspace will be replacement until later
-var backSpace = () =>
+var clearEntry = () =>
     {
-      input.innerHTML = input.innerHTML.slice(0,-1);
+      input.innerHTML = '';
     }
 
 var funcSelect = (symbol) =>
