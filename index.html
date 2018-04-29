@@ -6,40 +6,39 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="keys">
+  <div id="calc">
 
+    <div class="display">
+      <span id="output"></span>
 
+      <span id="input"></span>
+    </div>
 
-  <button onClick="typeDig('7')">7</button>
-  <button onClick="typeDig('8')">8</button>
-  <button onClick="typeDig('9')">9</button>
-  <button onClick="funcSelect('÷')">÷</button>
-  <button onClick="funcSelect('^')">^</button>
-
-  <button onClick="typeDig('4')">4</button>
-  <button onClick="typeDig('5')">5</button>
-  <button onClick="typeDig('6')">6</button>
-  <button onClick="funcSelect('×')">×</button>
-  <button onClick="changeSign()">+/-</button>
-
-  <button onClick="typeDig('1')">1</button>
-  <button onClick="typeDig('2')">2</button>
-  <button onClick="typeDig('3')">3</button>
-  <button onClick="funcSelect('-')">-</button>
-  <button onClick="allClear()">AC</button>
-
-  <button onClick="typeDig('0')">0</button>
-  <button onClick="typeDec('.')">.</button>
-  <button onClick="runOperate()">=</button>
-  <button onClick="funcSelect('+')">+</button>
-  <button onClick="clearEntry()">CE</button>
-
-  <div class="display">
-    <span id="output"></span>
-
-    <span id="input"></span>
+    <div class="keygrid">
+      <button onClick="typeDig('7')">7</button>
+      <button onClick="typeDig('8')">8</button>
+      <button onClick="typeDig('9')">9</button>
+      <button onClick="funcSelect('÷')">÷</button>
+      <button onClick="funcSelect('^')">^</button>
+      <button onClick="typeDig('4')">4</button>
+      <button onClick="typeDig('5')">5</button>
+      <button onClick="typeDig('6')">6</button>
+      <button onClick="funcSelect('×')">×</button>
+      <button onClick="changeSign()">+/-</button>
+      <button onClick="typeDig('1')">1</button>
+      <button onClick="typeDig('2')">2</button>
+      <button onClick="typeDig('3')">3</button>
+      <button onClick="funcSelect('-')">-</button>
+      <button onClick="allClear()">AC</button>
+      <button onClick="typeDig('0')">0</button>
+      <button onClick="typeDec('.')">.</button>
+      <button onClick="runOperate()">=</button>
+      <button onClick="funcSelect('+')">+</button>
+      <button onClick="clearEntry()">CE</button>
+    </div>
+    
   </div>
-  </div>
+
 </body>
 <script src="app.js" charset="utf-8"></script>
 </html>

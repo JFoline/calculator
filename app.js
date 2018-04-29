@@ -8,7 +8,7 @@ let x;
 let symbol;
 let operator;
 let func;
-
+//thats maths
 var add = (x,y) =>
 {return(x + y)}
 var subtract = (x,y) =>
